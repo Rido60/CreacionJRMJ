@@ -1,0 +1,199 @@
+/* Index */
+*{
+    box-sizing: border-box;
+}
+.logo{
+    padding-top: 5px;
+    width: 120px;
+    height: 60px;
+}
+.escudo{
+    width: 70px;
+    height: 90px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(40, 18, 122);
+    margin: 0 5px;
+    font-weight:bold;
+}
+
+.encabezado{
+    color: rgb(224, 6, 42);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.membrete-inicio{
+    background-color: rgb(252, 252, 252);
+    padding: 10px 5px;
+    display: grid;
+    line-height:0%;
+    grid-template: 30px 30px 30px / 120px auto 80px;
+
+}
+.navegador{
+    display: inline;  
+    text-align: end;
+    width: 100%;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;            
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+section{
+    background-color:rgb(252, 252, 252);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: auto;
+    height: auto;
+}
+
+/* pagina personal */
+h3{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+td{
+    font-style: italic;
+    color: rgb(107, 138, 138);
+}
+th{
+    
+    font-style:oblique;
+    color: rgb(72, 172, 172);
+}
+#titulo{
+    color: brown;
+    text-align: center;
+    font-style: inherit;
+    font-size: 2vw;
+    background: rgb(243, 240, 240);
+}
+.general{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Composicion Familiar */
+dl{
+    font-style:oblique;
+    font-size:large;
+    color: rgb(72, 172, 172);
+}
+dt{
+    font-style: inherit;
+    font-size: larger;
+    color: rgb(53, 102, 102);
+}
+.familia{
+    padding: 10px 10px;
+    display: inline-block;
+}
+
+/* Composicion de Amistades */
+li{
+    font-style: oblique;
+    font-size:medium;
+    color: rgb(31, 46, 31);
+}
+
+/* Mi ciudad */
+.resena{
+    display: flex;
+    gap: 1px;
+    flex-wrap: nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* texto*/
+    text-align: center;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(252, 252, 252);;
+    padding: 15px ;
+    
+}
+video{
+    width: 400px;
+    height: 400px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columna{
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+.columna-33{
+    width: 33.33%;
+}
+.bloque{
+    border: 1px solid grey;
+}
+
+.bloque .bloque-img.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+}
+
+.bloque .bloque-img img{
+    width: 100%;
+}
+
+.bloque .bloque-contenido{
+    padding: 0 10px;
+    text-align: center;
+}
+
+
+/* hobbies*/
+.cuadrado-perfecto{
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+.cuadrado-perfecto img{
+    width: 100%;  
+    height: 100%;
+    /*display: block;*/
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#galeria .cuadrado-perfecto h3{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 100px;
+    text-align: center;
+    margin-left: -50px;
+    color: white;
+}
+.container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#galeria .cuadrado-perfecto img{
+    filter: grayscale(1);
+}
+
+#galeria .cuadrado-perfecto:hover img{
+    filter: grayscale(0);
+}
+
+#galeria .cuadrado-perfecto:hover h3{
+    color:rgb(5, 181, 250);
+}
