@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    padding: 20px;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    font-weight: bold;
+}
+
+.container {       
+    position: relative;
+    border: 3px solid grey;
+    padding: 20px;
+    width: 450px;
+    height: 280px;
+    background: rgb(245, 243, 243);
+    
+}
+  
+.image-container {
+    display:flex ;
+    align-items: center;
+    position: relative;
+}
+
+.image-container .agrandar{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(224, 233, 233);
+    border: 3px solid grey;
+    
+}
+
+.image-container img{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+.image-container:hover img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+  
+p{
+    position: absolute;
+    align-content: center;
+    top: 80%;
+    left: 37%;
+}
+
+button{
+    border: 2px solid green;
+    background-color: rgb(243, 239, 239); 
+    font-weight: bold; 
+}
