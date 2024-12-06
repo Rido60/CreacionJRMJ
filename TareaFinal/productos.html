@@ -42,10 +42,7 @@
                     <div class="columna  columna-33 columna-mobile-100">
                         <div class="bloque-producto">
                             <div class="bloque-img-producto cuadrado-perfecto">
-                                <img src="img/productos/laptop.png">
-                            </div>
-                            <div class="ver-producto">
-                                <a href="#" class="ver">Ver Producto</a>
+                                <img src="img/productos/laptop.png" class="img-ver">
                             </div>
                             <div class="bloque-producto-marca">
                                 <h3>
@@ -57,10 +54,7 @@
                     <div class="columna  columna-33 columna-mobile-100">
                         <div class="bloque-producto">
                             <div class="bloque-img-producto cuadrado-perfecto">
-                                <img src="img/productos/modem.png">
-                            </div>
-                            <div class="ver-producto">
-                                <a href="#" class="ver1">Ver Producto</a>
+                                <img src="img/productos/modem.png" class="img-ver1">
                             </div>
                             <div class="bloque-producto-marca">
                                 <h3>
@@ -72,10 +66,7 @@
                     <div class="columna  columna-33 columna-mobile-100">
                         <div class="bloque-producto">
                             <div class="bloque-img-producto cuadrado-perfecto">
-                                <img src="img/productos/sonido1.png">
-                            </div>
-                            <div class="ver-producto">
-                                <a href="#" class="ver2">Ver Producto</a>
+                                <img src="img/productos/sonido1.png" class="img-ver2">
                             </div>
                             <div class="bloque-producto-marca">
                                 <h3>
@@ -87,10 +78,7 @@
                     <div class="columna  columna-33 columna-mobile-100">
                         <div class="bloque-producto">
                             <div class="bloque-img-producto cuadrado-perfecto">
-                                <img src="img/productos/reloj.png">
-                            </div>
-                            <div class="ver-producto">
-                                <a href="#" class="ver3">Ver Producto</a>
+                                <img src="img/productos/reloj.png" class="img-ver3">
                             </div>
                             <div class="bloque-producto-marca">
                                 <h3>
@@ -102,10 +90,7 @@
                     <div class="columna  columna-33 columna-mobile-100">
                         <div class="bloque-producto">
                             <div class="bloque-img-producto cuadrado-perfecto">
-                                <img src="img/productos/PS5.jpg">
-                            </div>
-                            <div class="ver-producto">
-                                <a href="#" class="ver4">Ver Producto</a>
+                                <img src="img/productos/PS5.jpg" class="img-ver4">
                             </div>
                             <div class="bloque-producto-marca">
                                 <h3>
@@ -117,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="modal modal-show">
+        <section class="modal ">
             <div class="modal-container">
                 <button id="anterior" class="button">Anterior</button>
                 <img id="modalimagen" src="" class="modal-img img-show" alt="Galeria de imagenes" >
@@ -129,14 +114,10 @@
             </div>
 
         </section>
-        <section>
-            <div class="container" id="lista" >
-
-                <a href="#"  onclick="mostrarcarrito()"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Compras precios</a>
-            </div>
-            <div class="container" id="lista1" >
-
-                <a href="#"  onclick="mostrarcarrito1()"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Compras productos</a>
+        <section class="tabla">
+            <div class="container">
+                <h3>Carrito de Compras</h3>
+                <div class="container" id="lista" ></div>
             </div>
         </section>
         <script src="js/main.js"></script>
@@ -195,7 +176,10 @@
                 </div>
             </div>
         </div>
-        <div class="barra-footer">&copy; Derechos Reservados Rido60 - 2024</div>
+        <div class="container">
+            <div class="barra-footer">&copy; Derechos Reservados Rido60 - 2024</div>
+        </div>
+        
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/funciones.js"></script>

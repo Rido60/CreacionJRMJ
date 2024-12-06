@@ -1,22 +1,22 @@
 //cargando arreglo de imagenes
-const ver = ["img", "img/productos/laptop.png", "img/productos/laptop1.png", "img/productos/laptop2.png"]
-const ver1 = ["img", "img/productos/modem.png", "img/productos/modem1.png"]
-const ver2 = ["img", "img/productos/sonido.jpg", "img/productos/sonido1.png"]
-const ver3 = ["img", "img/productos/reloj.png", "img/productos/reloj1.png"]
-const ver4 = ["img", "img/productos/PS5.jpg", "img/productos/PS51.jpg"]
+const ver = [ "img/productos/laptop.png", "img/productos/laptop1.png", "img/productos/laptop2.png"]
+const ver1 = [ "img/productos/modem.png", "img/productos/modem1.png"]
+const ver2 = [ "img/productos/sonido.jpg", "img/productos/sonido1.png"]
+const ver3 = [ "img/productos/reloj.png", "img/productos/reloj1.png"]
+const ver4 = [ "img/productos/PS5.jpg", "img/productos/PS51.jpg"]
 
-const preciover = ["Laptop Marca Samnsug","Bs. ", '3500']
-const preciover1 = ["Modem Marca Infinitu","Bs. ", '350']
-const preciover2 = ["Radio Marca LG","Bs. ", '1500']
-const preciover3 = ["Reloj Marca Citizen","Bs. ", '2800']
-const preciover4 = ["Play Station 5","Bs. ",'5500']
+const preciover = ["Laptop Marca Samnsug","Bs. ", 3500];
+const preciover1 = ["Modem Marca Infinitu","Bs. ", 350];
+const preciover2 = ["Radio Marca LG","Bs. ", 1500];
+const preciover3 = ["Reloj Marca Citizen","Bs. ", 2800];
+const preciover4 = ["Play Station 5","Bs. ",5500];
 
 let Index = 0;
 let item = 0;
-const total=[];
-const carrito=[];
 var producto = "";
-let precio = 0
+var moneda = " Bs ";
+let precio = 0;
+let total = 0;
 
 const imagen = document.getElementById("modalimagen");
 const anterior = document.getElementById("anterior");
@@ -24,10 +24,11 @@ const siguiente = document.getElementById("siguiente");
 
 mostrar();
 function mostrar() {
+
     if (pd == 0) {
         imagen.src = ver[Index];
         producto = preciover[0];
-        precio = preciover[2]
+        precio = preciover[2];
         document.getElementById("marca").innerHTML=preciover[0];
         document.getElementById("precio").innerHTML="Bs. "+preciover[2];
         anterior.disabled = Index === 0;
@@ -89,12 +90,11 @@ siguiente.addEventListener("click", () => {
     }
 });
 
-
-const openModal = document.querySelector('.ver');
-const openModal1 = document.querySelector('.ver1');
-const openModal2 = document.querySelector('.ver2');
-const openModal3 = document.querySelector('.ver3');
-const openModal4 = document.querySelector('.ver4');
+const openModal = document.querySelector('.img-ver');
+const openModal1 = document.querySelector('.img-ver1');
+const openModal2 = document.querySelector('.img-ver2');
+const openModal3 = document.querySelector('.img-ver3');
+const openModal4 = document.querySelector('.img-ver4');
 
 const modal = document.querySelector('.modal');
 const compra = document.querySelector('.modal-comprar');
@@ -146,53 +146,45 @@ closeModal.addEventListener('click', (e) => {
     modal.classList.remove('modal-show');
 });
 
+let valores = [];
+let carrito = [];
+
+
 compra.addEventListener('click', (e) => {
     e.preventDefault();
     alert('comprado');
-    total[item]=precio;
-    carrito[item]=producto;
+    
+    valores=[producto,moneda,precio];
+    carrito[item]=valores;
+    //console.log(carrito[item]);
     item++;
-    console.log(total);
-    console.log(carrito);
+    total=total+precio;
+
     modal.classList.remove('modal-show');
+    mostrarcarrito();
+
 });
 
 // agranda haciendo click
 
-
 function mostrarcarrito() {
-    let tabla='<table>';
-    tabla= tabla+'<tr> <th>Precio en Bs.</th></tr>'
-    total.forEach(p => {
-        
-        tabla=tabla+'<tr>';
-        tabla=tabla+'<td>'+p+'</td>';
-        tabla=tabla+'</tr>';
-        console.log(p);
-    });
-
-    tabla= tabla+'</table>'
-
-    document.getElementById('lista').innerHTML=tabla;
-
-
-}
-
-function mostrarcarrito1() {
     
-    let tabla1='<table>';
-    tabla1= tabla1+'<tr> <th>Producto</th></tr>'
+    let tabla='<table>';
+    tabla= tabla+'<tr> <th>Producto y Precio </tr>';
     carrito.forEach(c =>{
-        tabla1=tabla1+'<tr>';
-        tabla1=tabla1+'<td>'+c+'</td>';
-        tabla1=tabla1+'</tr>';
+        tabla=tabla+'<tr>';
+        tabla=tabla+'<td>'+c+'</td>';
+        tabla=tabla+'</tr>';
+        
         console.log(c);
-    });
-    tabla1= tabla1+'</table>'
-
-    document.getElementById('lista1').innerHTML=tabla1;
+    }); 
+    tabla= tabla+'<tr><th>'+"Total = Bs. "+total+'</th></tr>';
+    document.getElementById('lista').innerHTML=tabla;
+    tabla= tabla+'</table>';
 }
 
-
-
+// funcion enviar 
+function enviarblog(){
+    alert('mensaje enviado');
+}
 

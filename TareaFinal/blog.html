@@ -23,7 +23,6 @@
                 <a href="index.html">Inicio</a>
                 <a href="productos.html">Productos</a>
                 <a href="ubicacion.html">Ubicación</a>
-                
                 <a href="blog.html">Blog</a>
             </nav>
             <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
@@ -44,17 +43,16 @@
                     <div class="columna columna-50">
                         <form action="" method="post">
                             <div class="form-block">
-                                <input type="text" name="nombre" placeholder="Ingrese su Nombre" class="form-control">
+                                <input type="text" name="nombre" placeholder="Ingrese su Nombre" class="form-control" required>
                             </div>
                             <div class="form-block">
-                                <input type="email" name="email" placeholder="Ingrese su Correo" class="form-control">
+                                <input type="email" name="email" placeholder="Ingrese su Correo" class="form-control" required>
                             </div>
                             <div class="form-block">
-                                <textarea name="mensaje" id="mensaje" placeholder="Ingrese su Comentario"></textarea>
-                                
+                                <textarea name="mensaje" id="mensaje" placeholder="Ingrese su Comentario" required></textarea>
                             </div>
                             <div class="form-block botton-blog">
-                                <input type="submit" class="boton boton-blanco"   value="Enviar">
+                                <input type="submit" name="btn" class="boton boton-verde"   value="Enviar">
                             </div>
                         </form>
                     </div>
@@ -116,7 +114,10 @@
                 </div>
             </div>
         </div>
-        <div class="barra-footer">&copy; Derechos Reservados Rido60 - 2024</div>
+        <div class="container">
+            <div class="barra-footer">&copy; Derechos Reservados Rido60 - 2024</div>
+        </div>
+        
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/funciones.js"></script>
